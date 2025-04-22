@@ -1,6 +1,7 @@
-""""""
+""" Archivos de Utilidades para el programa """
 import json
 
+""" Formateo de la Respuesta que recibira el Front """
 def send_json_response(handler, data, status=200):
     response = json.dumps(data).encode("utf-8")
     handler.send_response(status)
