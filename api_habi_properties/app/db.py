@@ -60,7 +60,7 @@ def query_likes_property(property_id, user_id):
     cursor = conn.cursor(dictionary=True)
 
     sql = """
-        INSERT INTO likes_properties (property_id, user_id, date_create)
+        INSERT INTO likes_properties(property_id, user_id, date_create)
         VALUES (%(property_id)s, %(user_id)s, NOW())
     """
 

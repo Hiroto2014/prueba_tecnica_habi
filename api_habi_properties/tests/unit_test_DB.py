@@ -1,16 +1,20 @@
+"""Archivo de pruebas Unitarias de la conección a la base, con datos Constantes simulando una petición correcta"""
 import unittest
 from unittest.mock import patch, MagicMock
 from api_habi_properties.app.db import get_and_or_where, query_properties
 
 class TestQueryFunctions(unittest.TestCase):
 
+    """Función que evalia el dinamismo para el valor del AND"""
     def test_get_and_or_where_with_params(self):
         self.assertEqual(get_and_or_where({"key": "value"}), "AND ")
 
+    """Función que evalia el dinamismo para el valor del WHERE"""
     def test_get_and_or_where_without_params(self):
         self.assertEqual(get_and_or_where(), "WHERE ")
         self.assertEqual(get_and_or_where(None), "WHERE ")
 
+    """Función que simula la conección y obtener el dato mock de ciudad"""
     @patch("api_habi_properties.app.db.get_connection")
     def test_query_properties_no_filters(self, mock_get_connection):
         # Mocks
@@ -29,6 +33,7 @@ class TestQueryFunctions(unittest.TestCase):
         mock_cursor.fetchall.assert_called_once()
         mock_conn.close.assert_called_once()
 
+    """Función que simula la conección y obtener el dato mock de stado"""
     @patch("api_habi_properties.app.db.get_connection")
     def test_query_properties_with_filters(self, mock_get_connection):
         # Mocks

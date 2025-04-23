@@ -7,7 +7,7 @@ current_block = []
 
 for num in myArray:
     if num == 0:
-        # Fin de bloque actual
+        # Fin de un bloque de numeros
         if current_block:
             sorted_block = ''.join(str(n) for n in sorted(current_block))
             blocks.append(sorted_block)
@@ -17,7 +17,7 @@ for num in myArray:
     else:
         current_block.append(num)
 
-# Agregar el último bloque si queda algo
+# Agregar ultimo bloque si este existe
 if current_block:
     sorted_block = ''.join(str(n) for n in sorted(current_block))
     blocks.append(sorted_block)
