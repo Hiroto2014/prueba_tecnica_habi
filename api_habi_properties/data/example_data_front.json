@@ -1,0 +1,34 @@
+[
+  {
+    "year_built": 2017
+  },
+  {
+    "city": "pereira"
+  },
+  {
+    "state": "vendido"
+  },
+  {
+    "year_built": 2015,
+    "city": "Medellín",
+    "state": "pre_venta"
+  },
+  {
+    "year_built": 2020,
+    "city": "BOGOTA",
+    "state": "comprando"
+  },
+  {
+    "city": "cali",
+    "state": "en_venta"
+  },
+  {
+    "year_built": 2011,
+    "city": "manizales"
+  },
+  {
+    "year_built": 2011,
+    "state": "comprado"
+  }
+
+]
